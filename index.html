@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acclimate Archery — Custom Bow Builds &amp; Precision Tuning | Steamboat Springs, CO</title>
+  <meta name="description" content="High-end custom bow builds and precision tuning by Jake Bell — a one-man archery shop based in Steamboat Springs, Colorado, serving the Yampa Valley. For bow hunters, by bow hunters." />
+  <meta name="keywords" content="Acclimate Archery, Jake Bell, archery, bow tuning, custom bow builds, custom bow setups, precision bow tuning, high end archery, bow hunting, bow hunter, archery shop Steamboat Springs, Steamboat Springs archery, Yampa Valley archery, Colorado bow shop, hunting bow setup, arrow spine matching, broadhead tuning, string and cable service, bowstrings, elk hunting gear, archery Colorado" />
+  <meta name="author" content="Jake Bell, Acclimate Archery" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0e0d0c" />
+
+  <meta property="og:title" content="Acclimate Archery — Custom Bow Builds & Precision Tuning" />
+  <meta property="og:description" content="High-end custom bow builds and precision tuning by Jake Bell — a one-man archery shop in Steamboat Springs, Colorado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Images/hero-mountains.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Acclimate Archery — Custom Bow Builds & Precision Tuning" />
+  <meta name="twitter:description" content="High-end custom bow builds and precision tuning by Jake Bell — a one-man archery shop in Steamboat Springs, Colorado." />
+  <meta name="twitter:image" content="Images/hero-mountains.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportingGoodsStore",
+    "name": "Acclimate Archery",
+    "description": "High-end custom bow builds, precision bow tuning, and archery services by Jake Bell in Steamboat Springs, Colorado.",
+    "founder": {
+      "@type": "Person",
+      "name": "Jake Bell"
+    },
+    "telephone": "+1-612-554-9686",
+    "email": "jakebell412@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Steamboat Springs",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Steamboat Springs, CO", "Yampa Valley, CO", "Craig, CO", "Hayden, CO", "Stagecoach, CO"],
+    "priceRange": "$$",
+    "knowsAbout": ["Custom bow builds", "Precision bow tuning", "Archery", "Bow hunting", "Arrow spine matching", "Broadhead tuning"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght,wdth@0,100..900,62..125;1,100..900,62..125&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23191715'/%3E%3Cpath d='M14 42 L27 24 L33 32 L40 20 L52 42 Z' fill='none' stroke='%23ece9e2' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body data-theme="dark">
+
+  <!-- ======================= PRELOADER ======================= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <svg class="preloader__mark" viewBox="0 0 120 120" fill="none">
+        <circle class="preloader__ring" cx="60" cy="60" r="54" stroke="currentColor" stroke-width="1.5"/>
+        <path class="preloader__peaks" d="M28 77 L50.6 45 L62 60 L73 39.5 L92 77 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div class="preloader__wordwrap">
+        <span class="preloader__word">ACCLIMATE</span>
+      </div>
+      <div class="preloader__meta">
+        <span>EST. 6,732 FT</span>
+        <span class="preloader__count" id="preloaderCount">000</span>
+      </div>
+    </div>
+    <div class="preloader__curtain"></div>
+    <div class="preloader__curtain preloader__curtain--2"></div>
+  </div>
+
+  <!-- ======================= CURSOR ======================= -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__reticle">
+      <span class="cursor__tick cursor__tick--n"></span>
+      <span class="cursor__tick cursor__tick--e"></span>
+      <span class="cursor__tick cursor__tick--s"></span>
+      <span class="cursor__tick cursor__tick--w"></span>
+    </div>
+    <div class="cursor__dot"></div>
+  </div>
+
+  <!-- ======================= PROGRESS RAIL ======================= -->
+  <div class="progress-rail" aria-hidden="true">
+    <div class="progress-rail__arrow" id="progressArrow">
+      <svg viewBox="0 0 10 26" fill="none">
+        <path d="M5 0 L9 8 L5 6.5 L1 8 Z" fill="currentColor"/>
+        <line x1="5" y1="6.5" x2="5" y2="22" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M5 22 L8 26 M5 22 L2 26 M5 19 L8 23 M5 19 L2 23" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </div>
+    <div class="progress-rail__line"></div>
+  </div>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <nav class="site-nav site-nav--left" aria-label="Primary">
+        <a href="#what-we-do" class="site-nav__link" data-cursor="hover"><span class="site-nav__num">01</span>What We Do</a>
+        <a href="#craft" class="site-nav__link" data-cursor="hover"><span class="site-nav__num">02</span>The Builder</a>
+        <a href="#territory" class="site-nav__link" data-cursor="hover"><span class="site-nav__num">03</span>Areas Served</a>
+        <a href="#merch" class="site-nav__link" data-cursor="hover"><span class="site-nav__num">04</span>Merch</a>
+      </nav>
+
+      <a href="#top" class="site-logo" data-cursor="hover" aria-label="Acclimate Archery — home">
+        <svg class="site-logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M15 41 L27 24 L33 32 L39 21 L49 41 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="site-logo__type">
+          <span class="site-logo__name">Acclimate</span>
+          <span class="site-logo__sub">A&nbsp;R&nbsp;C&nbsp;H&nbsp;E&nbsp;R&nbsp;Y</span>
+        </span>
+      </a>
+
+      <div class="site-nav site-nav--right">
+        <span class="site-header__coords" aria-hidden="true">40.4850° N&thinsp;/&thinsp;106.8317° W</span>
+        <a href="#contact" class="btn btn--ghost" data-cursor="hover" data-magnetic>
+          <span class="btn__bg"></span>
+          <span class="btn__label">Contact</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" data-cursor="hover">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================= MOBILE MENU ======================= -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__bg"></div>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a href="#what-we-do" class="mobile-menu__link"><em>01</em>What We Do</a>
+      <a href="#craft" class="mobile-menu__link"><em>02</em>The Builder</a>
+      <a href="#territory" class="mobile-menu__link"><em>03</em>Areas Served</a>
+      <a href="#merch" class="mobile-menu__link"><em>04</em>Merch</a>
+      <a href="#contact" class="mobile-menu__link"><em>05</em>Contact</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <span>Steamboat Springs, Colorado</span>
+      <span>Est. 6,732 ft</span>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero hero--photo" id="hero">
+      <div class="hero__scene" id="heroScene">
+        <img class="hero__photo" src="Images/hero-mountains.jpg" alt="Snow-covered mountain peaks rising above a sea of clouds" />
+        <div class="hero__sky"></div>
+        <div class="hero__stars" id="heroStars"></div>
+        <svg class="hero__ridge hero__ridge--far" data-depth="0.12" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="ridgeFar" x1="0" y1="0.45" x2="0" y2="1">
+              <stop offset="0" stop-color="#484b4f"/><stop offset="0.55" stop-color="#33363a"/><stop offset="1" stop-color="#26282b"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#ridgeFar)" d="M0 609 L11 599 L22 586 L32 558 L43 537 L54 514 L65 482 L76 451 L87 427 L97 415 L108 404 L119 410 L130 403 L141 396 L152 382 L162 388 L173 375 L186 387 L198 383 L210 393 L223 406 L235 423 L247 438 L260 466 L272 501 L284 508 L297 529 L309 541 L321 545 L334 567 L346 596 L358 621 L371 635 L381 645 L391 640 L402 628 L412 631 L422 625 L433 621 L443 606 L453 580 L463 548 L474 529 L484 527 L494 507 L505 491 L515 488 L525 466 L536 436 L547 446 L559 449 L571 453 L582 467 L594 470 L606 477 L617 460 L629 455 L641 466 L652 471 L664 488 L676 512 L687 520 L699 539 L711 568 L722 593 L732 583 L743 558 L753 554 L763 557 L774 553 L784 538 L794 531 L804 528 L815 502 L825 489 L835 477 L845 452 L856 448 L866 449 L876 435 L886 439 L900 445 L913 442 L927 432 L940 417 L953 427 L967 422 L980 448 L994 458 L1007 475 L1020 503 L1034 520 L1047 533 L1060 557 L1074 582 L1087 585 L1101 600 L1109 576 L1116 568 L1124 564 L1132 553 L1140 545 L1148 529 L1156 507 L1164 492 L1172 471 L1180 460 L1188 452 L1196 450 L1204 441 L1211 448 L1219 441 L1227 444 L1239 464 L1252 466 L1264 467 L1276 465 L1288 468 L1300 452 L1313 453 L1325 466 L1337 481 L1349 508 L1361 513 L1374 515 L1386 535 L1398 562 L1410 581 L1422 604 L1433 589 L1445 576 L1456 546 L1467 519 L1478 507 L1489 487 L1500 472 L1511 461 L1522 456 L1533 457 L1544 459 L1556 447 L1567 430 L1578 418 L1589 409 L1600 401 L1600 1200 L0 1200 Z"/>
+          <path class="hero__ridge-line" fill="none" d="M0 609 L11 599 L22 586 L32 558 L43 537 L54 514 L65 482 L76 451 L87 427 L97 415 L108 404 L119 410 L130 403 L141 396 L152 382 L162 388 L173 375 L186 387 L198 383 L210 393 L223 406 L235 423 L247 438 L260 466 L272 501 L284 508 L297 529 L309 541 L321 545 L334 567 L346 596 L358 621 L371 635 L381 645 L391 640 L402 628 L412 631 L422 625 L433 621 L443 606 L453 580 L463 548 L474 529 L484 527 L494 507 L505 491 L515 488 L525 466 L536 436 L547 446 L559 449 L571 453 L582 467 L594 470 L606 477 L617 460 L629 455 L641 466 L652 471 L664 488 L676 512 L687 520 L699 539 L711 568 L722 593 L732 583 L743 558 L753 554 L763 557 L774 553 L784 538 L794 531 L804 528 L815 502 L825 489 L835 477 L845 452 L856 448 L866 449 L876 435 L886 439 L900 445 L913 442 L927 432 L940 417 L953 427 L967 422 L980 448 L994 458 L1007 475 L1020 503 L1034 520 L1047 533 L1060 557 L1074 582 L1087 585 L1101 600 L1109 576 L1116 568 L1124 564 L1132 553 L1140 545 L1148 529 L1156 507 L1164 492 L1172 471 L1180 460 L1188 452 L1196 450 L1204 441 L1211 448 L1219 441 L1227 444 L1239 464 L1252 466 L1264 467 L1276 465 L1288 468 L1300 452 L1313 453 L1325 466 L1337 481 L1349 508 L1361 513 L1374 515 L1386 535 L1398 562 L1410 581 L1422 604 L1433 589 L1445 576 L1456 546 L1467 519 L1478 507 L1489 487 L1500 472 L1511 461 L1522 456 L1533 457 L1544 459 L1556 447 L1567 430 L1578 418 L1589 409 L1600 401"/>
+        </svg>
+        <svg class="hero__ridge hero__ridge--mid" data-depth="0.26" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="ridgeMid" x1="0" y1="0.5" x2="0" y2="1">
+              <stop offset="0" stop-color="#2e3033"/><stop offset="0.6" stop-color="#232425"/><stop offset="1" stop-color="#1b1c1d"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#ridgeMid)" d="M0 733 L11 733 L22 717 L33 694 L45 663 L56 646 L67 610 L78 558 L89 526 L100 496 L112 465 L123 459 L134 447 L145 443 L156 420 L167 432 L179 423 L197 434 L216 429 L235 441 L254 449 L273 480 L292 490 L310 525 L329 538 L348 541 L367 541 L386 572 L405 588 L423 594 L442 624 L461 662 L480 699 L492 678 L504 666 L516 643 L529 608 L541 593 L553 576 L565 571 L577 555 L590 557 L602 535 L614 530 L626 523 L638 519 L651 501 L663 489 L675 482 L688 515 L701 542 L714 558 L727 562 L740 576 L754 588 L767 587 L780 595 L793 597 L806 610 L819 597 L832 608 L845 615 L858 645 L871 682 L885 697 L902 695 L920 676 L938 675 L956 669 L973 623 L991 601 L1009 586 L1027 566 L1045 554 L1062 537 L1080 544 L1098 541 L1116 554 L1134 542 L1151 519 L1169 506 L1179 537 L1189 546 L1200 577 L1210 602 L1220 621 L1230 625 L1240 654 L1251 676 L1261 692 L1271 692 L1281 685 L1291 696 L1302 701 L1312 682 L1322 683 L1332 683 L1349 666 L1366 646 L1382 640 L1399 651 L1416 624 L1433 602 L1449 562 L1466 536 L1483 549 L1500 546 L1516 540 L1533 517 L1550 513 L1567 498 L1583 491 L1600 476 L1600 1200 L0 1200 Z"/>
+          <path class="hero__ridge-line" fill="none" d="M0 733 L11 733 L22 717 L33 694 L45 663 L56 646 L67 610 L78 558 L89 526 L100 496 L112 465 L123 459 L134 447 L145 443 L156 420 L167 432 L179 423 L197 434 L216 429 L235 441 L254 449 L273 480 L292 490 L310 525 L329 538 L348 541 L367 541 L386 572 L405 588 L423 594 L442 624 L461 662 L480 699 L492 678 L504 666 L516 643 L529 608 L541 593 L553 576 L565 571 L577 555 L590 557 L602 535 L614 530 L626 523 L638 519 L651 501 L663 489 L675 482 L688 515 L701 542 L714 558 L727 562 L740 576 L754 588 L767 587 L780 595 L793 597 L806 610 L819 597 L832 608 L845 615 L858 645 L871 682 L885 697 L902 695 L920 676 L938 675 L956 669 L973 623 L991 601 L1009 586 L1027 566 L1045 554 L1062 537 L1080 544 L1098 541 L1116 554 L1134 542 L1151 519 L1169 506 L1179 537 L1189 546 L1200 577 L1210 602 L1220 621 L1230 625 L1240 654 L1251 676 L1261 692 L1271 692 L1281 685 L1291 696 L1302 701 L1312 682 L1322 683 L1332 683 L1349 666 L1366 646 L1382 640 L1399 651 L1416 624 L1433 602 L1449 562 L1466 536 L1483 549 L1500 546 L1516 540 L1533 517 L1550 513 L1567 498 L1583 491 L1600 476"/>
+        </svg>
+        <canvas class="hero__mist" id="heroMist" aria-hidden="true"></canvas>
+        <svg class="hero__ridge hero__ridge--near" data-depth="0.45" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="ridgeNear" x1="0" y1="0.55" x2="0" y2="1">
+              <stop offset="0" stop-color="#1b1917"/><stop offset="1" stop-color="#0e0d0c"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#ridgeNear)" d="M0 829 L18 774 L37 744 L55 709 L73 682 L91 658 L110 634 L128 629 L146 623 L164 629 L183 611 L201 584 L219 556 L237 547 L256 553 L274 553 L292 575 L317 605 L341 624 L365 626 L390 622 L414 653 L438 669 L462 680 L487 668 L511 671 L535 702 L560 716 L584 740 L608 736 L633 734 L657 740 L681 766 L697 753 L712 748 L728 761 L744 756 L759 738 L775 738 L791 708 L806 674 L822 654 L838 662 L853 622 L869 609 L885 575 L900 553 L916 556 L932 551 L954 560 L976 550 L998 549 L1020 570 L1042 606 L1064 636 L1086 649 L1108 653 L1130 670 L1152 691 L1175 688 L1197 680 L1219 702 L1241 738 L1263 756 L1285 797 L1305 756 L1324 743 L1344 731 L1364 700 L1383 699 L1403 673 L1423 675 L1443 680 L1462 670 L1482 637 L1502 617 L1521 617 L1541 602 L1561 593 L1580 564 L1600 531 L1600 1200 L0 1200 Z"/>
+        </svg>
+        <canvas class="hero__snow" id="heroSnow" aria-hidden="true"></canvas>
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="hero__vignette" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-reveal>
+          <span class="hero__eyebrow-line"></span>
+          Steamboat Springs&ensp;·&ensp;Colorado&ensp;·&ensp;Est. 6,732 ft
+          <span class="hero__eyebrow-line"></span>
+        </p>
+        <h1 class="hero__title">
+          <span class="hero__title-row"><span class="split-line">Bow Hunting:</span></span>
+          <span class="hero__title-row hero__title-row--serif"><span class="split-line"><em>Elevated</em></span></span>
+        </h1>
+        <p class="hero__sub" data-reveal>
+          High-end custom bow builds and precision tuning&nbsp;— one
+          shop, one builder, no shortcuts. Jake Bell, working out of
+          Steamboat Springs.
+        </p>
+        <div class="hero__actions" data-reveal>
+          <a href="#what-we-do" class="btn btn--solid" data-cursor="hover" data-magnetic>
+            <span class="btn__bg"></span>
+            <span class="btn__label">What We Do</span>
+            <svg class="btn__icon" viewBox="0 0 16 16"><path d="M2 8 H13 M9 3.5 L13.5 8 L9 12.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#what-we-do-ctas" class="btn btn--line" data-cursor="hover" data-magnetic>
+            <span class="btn__bg"></span>
+            <span class="btn__label">Start a Build</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__foot" data-reveal>
+        <div class="hero__scrollcue" aria-hidden="true">
+          <span class="hero__scrollcue-track"><span class="hero__scrollcue-thumb"></span></span>
+          <span class="hero__scrollcue-label">Scroll</span>
+        </div>
+        <p class="hero__foot-note">Custom builds&ensp;/&ensp;precision tuning&ensp;/&ensp;merch</p>
+        <div class="hero__wind" aria-hidden="true">
+          <span>WIND</span><span class="hero__wind-val" id="windVal">3.4 MPH NW</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= WHAT WE DO ======================= -->
+    <section class="services section" id="what-we-do">
+      <div class="section__head">
+        <p class="section__eyebrow" data-reveal><span class="section__eyebrow-dot"></span>01 — What We Do</p>
+        <h2 class="section__title" data-split-title>
+          Every bow leaves <em>perfect.</em>
+        </h2>
+        <p class="section__lede" data-reveal>
+          No counter queue. No rushed pro-shop tune. One builder, one shop, and a
+          setup process that treats your rig like the precision instrument it is.
+        </p>
+      </div>
+
+      <div class="services__grid" id="what-we-do-ctas">
+        <article class="service-card" data-tilt data-reveal>
+          <div class="service-card__sheen"></div>
+          <span class="service-card__index">01</span>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 6 C24 14 24 34 12 42" />
+              <line x1="12" y1="6" x2="12" y2="42" stroke-dasharray="2 4"/>
+              <line x1="4" y1="24" x2="44" y2="24"/>
+              <path d="M38 24 L32 20 M38 24 L32 28" />
+              <path d="M4 24 L8 21 M4 24 L8 27" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Custom Bow Builds</h3>
+          <p class="service-card__body">
+            Spec'd from a blank slate — riser, limbs, strings, rest, sight, stabilizers —
+            matched to your draw, your terrain, and the animal you're after. Built,
+            tuned, and dialed in before it ever leaves the shop.
+          </p>
+          <ul class="service-card__list">
+            <li>Full component selection &amp; sourcing</li>
+            <li>Draw-length &amp; grip fitting</li>
+            <li>Paper-tuned &amp; sighted at the shop</li>
+          </ul>
+          <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i>→</i></a>
+        </article>
+
+        <article class="service-card" data-tilt data-reveal>
+          <div class="service-card__sheen"></div>
+          <span class="service-card__index">02</span>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="17"/>
+              <circle cx="24" cy="24" r="9"/>
+              <circle cx="24" cy="24" r="1.8" fill="currentColor"/>
+              <line x1="24" y1="2" x2="24" y2="12"/>
+              <line x1="24" y1="36" x2="24" y2="46"/>
+              <line x1="2" y1="24" x2="12" y2="24"/>
+              <line x1="36" y1="24" x2="46" y2="24"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Precision Tune &amp; Service</h3>
+          <p class="service-card__body">
+            Paper tune, timing, cam sync, center shot, and broadhead tuning — the
+            pre-season once-over that turns "close enough" into a bow that stacks
+            arrows where you're looking.
+          </p>
+          <ul class="service-card__list">
+            <li>Paper &amp; walk-back tuning</li>
+            <li>String, cable &amp; peep service</li>
+            <li>Broadhead flight verification</li>
+          </ul>
+          <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i>→</i></a>
+        </article>
+
+        <article class="service-card" data-tilt data-reveal>
+          <div class="service-card__sheen"></div>
+          <span class="service-card__index">03</span>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 10 L20 6 Q24 10 28 6 L34 10 L40 16 L34 20 L34 42 L14 42 L14 20 L8 16 Z"/>
+              <path d="M20 6.5 Q24 14 28 6.5" stroke-dasharray="2 3"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Merch</h3>
+          <p class="service-card__body">
+            Because your hunting buddies need to know whose camp is running
+            the show. Acclimate Archery snapbacks and tees — simple gear,
+            just off the clock for once.
+          </p>
+          <ul class="service-card__list">
+            <li>"Superfly" snapbacks</li>
+            <li>Acclimate Archery tees</li>
+            <li>Small drops, no reprints</li>
+          </ul>
+          <a href="#merch" class="service-card__cta service-card__cta--btn" data-cursor="hover">Shop the merch<i>→</i></a>
+        </article>
+      </div>
+
+      <p class="services__note" data-reveal>
+        <em>No shortcuts. No gimmicks.</em>&ensp;Just top-of-the-line bows, done right.
+      </p>
+    </section>
+
+    <!-- ======================= CRAFT / ABOUT ======================= -->
+    <section class="craft section section--dark" id="craft">
+      <div class="craft__grid">
+        <div class="craft__left">
+          <p class="section__eyebrow section__eyebrow--light" data-reveal><span class="section__eyebrow-dot"></span>03 — The Builder</p>
+          <h2 class="craft__title" data-split-title>
+            For bow hunters,<br /><em>by bow hunters.</em>
+          </h2>
+          <div class="craft__sig" data-reveal>
+            <span class="craft__sig-name">Jake Bell</span>
+            <svg class="craft__sig-arrow" viewBox="0 0 260 26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path class="craft__sig-path" stroke-width="1.4" d="M4 16 C60 12 150 12 244 13"/>
+              <path class="craft__sig-path craft__sig-path--head" stroke-width="1.4" d="M244 13 L232 6 M244 13 L232 20"/>
+              <path class="craft__sig-path craft__sig-path--fletch" stroke-width="1.2" d="M14 16 L6 8 M22 16 L14 8 M30 15 L22 7"/>
+              <path class="craft__sig-path craft__sig-path--fletch" stroke-width="1.2" d="M14 16 L6 24 M22 16 L14 24 M30 15 L22 23"/>
+            </svg>
+            <span class="craft__sig-role">Owner &amp; sole proprietor, Acclimate Archery</span>
+          </div>
+          <div class="craft__specialties" data-reveal>
+            <span class="craft__specialties-label">Specialties</span>
+            <ul class="craft__specialties-list" id="specialtiesList">
+              <li><i>01</i><span class="craft__specialty-copy"><b>Custom Builds</b><em>Built right, every time.</em></span></li>
+              <li><i>02</i><span class="craft__specialty-copy"><b>Precision Tuning</b><em>Dialed in before you draw.</em></span></li>
+              <li><i>03</i><span class="craft__specialty-copy"><b>Hunting Rig Setups</b><em>Built for the field.</em></span></li>
+              <li><i>04</i><span class="craft__specialty-copy"><b>Arrow Spine Matching</b><em>Matched to your exact draw.</em></span></li>
+              <li><i>05</i><span class="craft__specialty-copy"><b>String &amp; Cable Work</b><em>Replaced, timed, trusted.</em></span></li>
+              <li><i>06</i><span class="craft__specialty-copy"><b>Broadhead Tuning</b><em>Flying true, every head.</em></span></li>
+            </ul>
+            <span class="craft__coords">40.4850° N&ensp;·&ensp;106.8317° W</span>
+          </div>
+        </div>
+        <div class="craft__right">
+          <div class="craft__portrait" data-reveal data-parallax-img>
+            <img src="Images/jake.jpg" alt="Jake Bell holding a trout, out on the water" />
+            <span class="craft__portrait-frame" aria-hidden="true"></span>
+            <span class="craft__portrait-tag">Jake Bell — Owner / Founder</span>
+          </div>
+          <div class="craft__copy">
+            <p class="craft__para" data-reveal>
+              Jake Bell has spent <strong>over 15 years</strong> bow hunting across
+              the US, and somewhere along the way, that passion turned into a
+              career. When he's not in the field, he's usually still thinking
+              about it — tuning bows, testing new setups, or growing his
+              business. He's also an avid fly fisherman and a self-taught
+              entrepreneur who built Acclimate Archery from the ground up.
+            </p>
+            <p class="craft__para" data-reveal>
+              Jake is known for his precision work — bow tuning and custom
+              builds that are dialed in exactly to how you shoot. He's the guy
+              people trust to get their setup right, whether that means
+              fine-tuning before season or building something from scratch.
+              Ask anyone who's worked with him and they'll tell you the same
+              thing: he's sharp, easy to talk to, and genuinely wants to see
+              you succeed out there.
+            </p>
+            <div class="craft__facts" data-reveal>
+              <div class="craft__fact">
+                <span class="craft__fact-num" data-count="15" data-suffix="+">0</span>
+                <span class="craft__fact-label">Years in the field</span>
+              </div>
+              <div class="craft__fact">
+                <span class="craft__fact-num" data-count="1">0</span>
+                <span class="craft__fact-label">Builder. Every bow, start to finish</span>
+              </div>
+              <div class="craft__fact">
+                <span class="craft__fact-num" data-count="100" data-suffix="%">0</span>
+                <span class="craft__fact-label">Paper-tuned in-house, every bow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= TERRAIN / TERRITORY ======================= -->
+    <section class="territory section section--void" id="territory">
+      <canvas class="territory__gl" id="terrainCanvas" aria-hidden="true"></canvas>
+      <div class="territory__scrim" aria-hidden="true"></div>
+      <div class="territory__inner">
+        <p class="section__eyebrow section__eyebrow--light" data-reveal><span class="section__eyebrow-dot"></span>02 — Areas Served</p>
+        <h2 class="section__title section__title--light" data-split-title>
+          Based in Steamboat.<br /><em>Serving the Yampa Valley.</em>
+        </h2>
+        <div class="territory__grid">
+          <div class="territory__map" data-reveal>
+            <svg viewBox="0 0 460 340" fill="none" aria-label="Map of Colorado with Steamboat Springs marked">
+              <defs>
+                <clipPath id="coClip"><rect x="30" y="40" width="400" height="260" rx="3"/></clipPath>
+              </defs>
+              <g clip-path="url(#coClip)" class="territory__topo">
+                <path d="M-10 90 Q120 40 230 95 T470 80" />
+                <path d="M-10 130 Q130 80 240 135 T470 120" />
+                <path d="M-10 170 Q140 120 250 175 T470 160" />
+                <path d="M-10 210 Q150 160 260 215 T470 200" />
+                <path d="M-10 250 Q160 205 270 255 T470 240" />
+                <path d="M-10 290 Q170 250 280 295 T470 280" />
+              </g>
+              <rect class="territory__border" x="30" y="40" width="400" height="260" rx="3"/>
+              <!-- Border box = the State of Colorado (109.05°–102.05° W, 41°–37° N).
+                   Every dot below is projected from its real lat/long. -->
+              <g class="territory__ticks" aria-hidden="true">
+                <line x1="130" y1="40" x2="130" y2="46"/><line x1="230" y1="40" x2="230" y2="46"/><line x1="330" y1="40" x2="330" y2="46"/>
+                <line x1="130" y1="294" x2="130" y2="300"/><line x1="230" y1="294" x2="230" y2="300"/><line x1="330" y1="294" x2="330" y2="300"/>
+                <line x1="30" y1="127" x2="36" y2="127"/><line x1="30" y1="213" x2="36" y2="213"/>
+                <line x1="424" y1="127" x2="430" y2="127"/><line x1="424" y1="213" x2="430" y2="213"/>
+              </g>
+              <g class="territory__towns">
+                <g class="territory__town">
+                  <circle class="territory__town-ring" cx="116" cy="71" r="7"/>
+                  <circle class="territory__town-dot" cx="116" cy="71" r="2.5"/>
+                  <text x="92" y="59">CRAIG</text>
+                </g>
+                <g class="territory__town">
+                  <circle class="territory__town-ring" cx="257" cy="67" r="7"/>
+                  <circle class="territory__town-dot" cx="257" cy="67" r="2.5"/>
+                  <text x="265" y="71">FORT COLLINS</text>
+                </g>
+                <g class="territory__town">
+                  <circle class="territory__town-ring" cx="262" cy="122" r="7"/>
+                  <circle class="territory__town-dot" cx="262" cy="122" r="2.5"/>
+                  <text x="270" y="126">DENVER</text>
+                </g>
+                <g class="territory__town">
+                  <circle class="territory__town-ring" cx="183" cy="128" r="7"/>
+                  <circle class="territory__town-dot" cx="183" cy="128" r="2.5"/>
+                  <text x="176" y="144">VAIL</text>
+                </g>
+                <g class="territory__town">
+                  <circle class="territory__town-ring" cx="59" cy="166" r="7"/>
+                  <circle class="territory__town-dot" cx="59" cy="166" r="2.5"/>
+                  <text x="67" y="170">GRAND JUNCTION</text>
+                </g>
+                <g class="territory__town">
+                  <circle class="territory__town-ring" cx="272" cy="181" r="7"/>
+                  <circle class="territory__town-dot" cx="272" cy="181" r="2.5"/>
+                  <text x="280" y="185">CO SPRINGS</text>
+                </g>
+                <g class="territory__town">
+                  <circle class="territory__town-ring" cx="97" cy="282" r="7"/>
+                  <circle class="territory__town-dot" cx="97" cy="282" r="2.5"/>
+                  <text x="105" y="286">DURANGO</text>
+                </g>
+              </g>
+              <g class="territory__marker" style="--mx: 157px; --my: 74px;">
+                <circle class="territory__pulse" cx="157" cy="74" r="8"/>
+                <circle class="territory__pulse territory__pulse--2" cx="157" cy="74" r="8"/>
+                <circle cx="157" cy="74" r="4.5" class="territory__dot"/>
+                <line x1="157" y1="74" x2="190" y2="58" class="territory__leader"/>
+                <text x="196" y="54" class="territory__label">
+                  <tspan x="196" dy="0">STEAMBOAT SPRINGS</tspan>
+                  <tspan x="196" dy="13">— HQ</tspan>
+                </text>
+              </g>
+              <g class="territory__compass" transform="translate(404, 268)" aria-hidden="true">
+                <circle class="territory__compass-ring" cx="0" cy="0" r="13"/>
+                <line x1="0" y1="-16" x2="0" y2="-13"/>
+                <line x1="0" y1="13" x2="0" y2="16"/>
+                <line x1="-16" y1="0" x2="-13" y2="0"/>
+                <line x1="16" y1="0" x2="13" y2="0"/>
+                <path class="territory__compass-needle-n" d="M0 -10 L3 0 L0 2 L-3 0 Z"/>
+                <path class="territory__compass-needle-s" d="M0 10 L3 0 L0 -2 L-3 0 Z"/>
+                <circle class="territory__compass-pivot" cx="0" cy="0" r="1.3"/>
+                <text x="0" y="-20" text-anchor="middle">N</text>
+                <text x="0" y="26" text-anchor="middle">S</text>
+                <text x="20" y="3.5" text-anchor="middle">E</text>
+                <text x="-20" y="3.5" text-anchor="middle">W</text>
+              </g>
+              <text x="30" y="322" class="territory__coords-txt">40.4850° N, 106.8317° W — STATE OF COLORADO</text>
+            </svg>
+          </div>
+          <div class="territory__copy">
+            <p class="territory__para" data-reveal>
+              Home base sits at <strong>6,732 feet</strong> in Steamboat Springs — elk
+              country. Every bow is built, tuned, and handed off right here at the
+              shop — hunters and archers from across the Yampa Valley make the
+              trip in.
+            </p>
+            <ul class="territory__list" data-reveal>
+              <li><span>Steamboat Springs</span><em>Home base &amp; the shop</em></li>
+              <li><span>The Yampa Valley</span><em>Craig · Hayden · Stagecoach</em></li>
+            </ul>
+            <div class="territory__elev" data-reveal aria-hidden="true">
+              <span class="territory__elev-num" data-count="6732" data-format="comma">0</span>
+              <span class="territory__elev-unit">FT — HOME ELEVATION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= BRANDS ======================= -->
+    <section class="brands section" id="brands">
+      <div class="section__head section__head--tight">
+        <p class="section__eyebrow" data-reveal><span class="section__eyebrow-dot"></span>Partners</p>
+        <h2 class="section__title section__title--sm" data-split-title>Brands we <em>love.</em></h2>
+      </div>
+      <div class="brands__rows" data-reveal>
+        <a class="brand-row" href="https://optionarchery.com" target="_blank" rel="noopener" data-cursor="hover">
+          <span class="brand-row__name">Option Archery</span>
+          <span class="brand-row__desc">Switchback sights &amp; quivers</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="brand-row" href="https://gasbowstrings.com" target="_blank" rel="noopener" data-cursor="hover">
+          <span class="brand-row__name">GAS Bowstrings</span>
+          <span class="brand-row__desc">Custom strings &amp; cables</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="brand-row" href="https://www.arizonaarchery.com" target="_blank" rel="noopener" data-cursor="hover">
+          <span class="brand-row__name">AAE — Arizona Archery</span>
+          <span class="brand-row__desc">Rests, vanes &amp; accessories</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="brand-row" href="https://psearchery.com" target="_blank" rel="noopener" data-cursor="hover">
+          <span class="brand-row__name">PSE Archery</span>
+          <span class="brand-row__desc">Bows &amp; risers</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ======================= MERCH ======================= -->
+    <section class="merch section" id="merch">
+      <div class="section__head section__head--tight section__head--center">
+        <p class="section__eyebrow section__eyebrow--center" data-reveal><span class="section__eyebrow-dot"></span>Shop</p>
+        <h2 class="section__title section__title--sm" data-split-title>
+          Wear the <em>shop.</em>
+        </h2>
+      </div>
+
+      <div class="merch__grid">
+        <!-- ---- PRODUCT 1: SNAPBACK HAT ---- -->
+        <article class="merch-card" data-tilt data-reveal>
+          <div class="merch-card__photo" data-parallax-img>
+            <!-- PHOTO DROP-IN: replace this placeholder block with
+                 <img src="Images/merch-hat.jpg" alt="Acclimate Archery snapback hat"> -->
+            <div class="merch-card__photo-ph" aria-hidden="true">
+              <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="mphg1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#2e2b28"/><stop offset="1" stop-color="#1a1816"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="400" fill="url(#mphg1)"/>
+                <g stroke="#7a746a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M110 226 C110 174 150 136 206 136 C262 136 302 174 302 226" />
+                  <path d="M110 226 C90 229 78 236 78 243 C78 253 133 260 206 260 C231 260 253 258 268 254" />
+                  <path d="M268 254 C292 248 302 238 302 231 C302 226 296 221 285 218" />
+                  <circle cx="206" cy="130" r="6" fill="#7a746a" stroke="none"/>
+                  <path d="M148 168 Q206 150 264 168" stroke-dasharray="3 5" stroke-width="1.4"/>
+                  <path d="M206 136 L206 168" stroke-dasharray="2 4" stroke-width="1.2"/>
+                </g>
+                <text x="200" y="330" text-anchor="middle" fill="#6e685e" font-family="monospace" font-size="11" letter-spacing="3">PHOTO — SNAPBACK</text>
+              </svg>
+            </div>
+            <span class="merch-card__badge">New</span>
+          </div>
+          <div class="merch-card__body">
+            <div class="merch-card__head">
+              <h3 class="merch-card__name">"Superfly" Snapback</h3>
+              <span class="merch-card__price">$120</span>
+            </div>
+            <p class="merch-card__desc">
+              Embroidered Acclimate mark, adjustable snap closure. One size fits most.
+            </p>
+            <div class="merch-card__sizes" role="group" aria-label="Select size">
+              <button type="button" class="merch-card__size is-active" data-cursor="hover">S/M</button>
+              <button type="button" class="merch-card__size" data-cursor="hover">L/XL</button>
+            </div>
+            <div class="merch-card__actions">
+              <!-- SHOPIFY BUY BUTTON DROP-IN: once the store's ready, swap
+                   .btn--disabled back to .btn--solid, restore the label/icon
+                   below, and re-enable the button (see js/shopify-store.js) -->
+              <button type="button" class="merch-card__buy btn btn--disabled" disabled data-product="hat">
+                <span class="btn__label">Online Purchase Coming Soon</span>
+              </button>
+              <span class="merch-card__note">Photos coming soon</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- PRODUCT 2: TEE ---- -->
+        <article class="merch-card" data-tilt data-reveal>
+          <div class="merch-card__photo" data-parallax-img>
+            <!-- PHOTO DROP-IN: replace this placeholder block with
+                 <img src="Images/merch-tee.jpg" alt="Acclimate Archery t-shirt"> -->
+            <div class="merch-card__photo-ph" aria-hidden="true">
+              <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="mphg2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#2e2b28"/><stop offset="1" stop-color="#1a1816"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="400" fill="url(#mphg2)"/>
+                <g stroke="#7a746a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M148 108 L110 128 L84 168 L118 194 L136 178 L136 300 L272 300 L272 178 L290 194 L324 168 L298 128 L260 108 C260 128 236 140 204 140 C172 140 148 128 148 108 Z"/>
+                </g>
+                <text x="200" y="330" text-anchor="middle" fill="#6e685e" font-family="monospace" font-size="11" letter-spacing="3">PHOTO — TEE</text>
+              </svg>
+            </div>
+            <span class="merch-card__badge">New</span>
+          </div>
+          <div class="merch-card__body">
+            <div class="merch-card__head">
+              <h3 class="merch-card__name">Acclimate Archery Tee</h3>
+              <span class="merch-card__price">$35</span>
+            </div>
+            <p class="merch-card__desc">
+              Heavyweight cotton, screen-printed Acclimate graphic. Built to layer
+              under a pack, worn everywhere else.
+            </p>
+            <div class="merch-card__sizes" role="group" aria-label="Select size">
+              <button type="button" class="merch-card__size is-active" data-cursor="hover">M</button>
+              <button type="button" class="merch-card__size" data-cursor="hover">L</button>
+              <button type="button" class="merch-card__size" data-cursor="hover">XL</button>
+            </div>
+            <div class="merch-card__actions">
+              <!-- SHOPIFY BUY BUTTON DROP-IN: once the store's ready, swap
+                   .btn--disabled back to .btn--solid, restore the label/icon
+                   below, and re-enable the button (see js/shopify-store.js) -->
+              <button type="button" class="merch-card__buy btn btn--disabled" disabled data-product="tee">
+                <span class="btn__label">Online Purchase Coming Soon</span>
+              </button>
+              <span class="merch-card__note">Photos coming soon</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="merch__note">
+        Online ordering's on its way — until then, grab a hat or a tee
+        <em>in person, straight from Jake at the shop.</em>
+      </p>
+    </section>
+
+    <!-- ======================= QUOTE ======================= -->
+    <section class="quote quote--photo section--void" id="quote">
+      <img class="quote__photo" src="Images/quote-sunset.jpg" alt="Sun setting behind tall prairie grass at dusk" />
+      <div class="quote__scrim" aria-hidden="true"></div>
+      <canvas class="quote__embers" id="quoteEmbers" aria-hidden="true"></canvas>
+      <figure class="quote__fig">
+        <blockquote class="quote__text" data-split-title>
+          "A hunt based only on trophies taken falls short of what the ultimate goal should&nbsp;be…
+          <em>time to commune with your inner soul."</em>
+        </blockquote>
+        <figcaption class="quote__cite" data-reveal>— Fred Bear</figcaption>
+      </figure>
+    </section>
+
+    <!-- ======================= TESTIMONIALS ======================= -->
+    <section class="testimonials section" id="testimonials">
+      <div class="section__head">
+        <p class="section__eyebrow" data-reveal><span class="section__eyebrow-dot"></span>Field Reports</p>
+        <h2 class="section__title" data-split-title>Word from <em>the field.</em></h2>
+      </div>
+      <!-- REAL CLIENT REVIEWS — sourced from Google -->
+      <div class="testimonials__rail" id="testimonialRail">
+        <article class="testimonial" data-reveal data-tilt>
+          <span class="testimonial__mark" aria-hidden="true">"</span>
+          <p class="testimonial__body">
+            Jake did an awesome job setting up my Mach 34, this thing shoots lights
+            out. His attention to detail on arrow building is awesome. I'd highly
+            recommend working with Acclimate Archery!
+          </p>
+          <footer class="testimonial__foot">
+            <span class="testimonial__name">Ryan Sundberg</span>
+            <span class="testimonial__meta">Google review</span>
+          </footer>
+        </article>
+        <article class="testimonial" data-reveal data-tilt>
+          <span class="testimonial__mark" aria-hidden="true">"</span>
+          <p class="testimonial__body">
+            Jake does a great job at explaining everything. He's not only full of
+            knowledge, he wants you to be a better archer. Arrow groups became much
+            tighter and more consistent — took my first archery elk this year after
+            visiting Jake. 10/10 recommend!
+          </p>
+          <footer class="testimonial__foot">
+            <span class="testimonial__name">Jeb Powell</span>
+            <span class="testimonial__meta">Google review</span>
+          </footer>
+        </article>
+        <article class="testimonial" data-reveal data-tilt>
+          <span class="testimonial__mark" aria-hidden="true">"</span>
+          <p class="testimonial__body">
+            My bow sight became loose and my 3rd axis was messed up while hunting
+            elk over-the-counter. Found him online and he fixed it, plus my cam
+            timing, on short notice — from 10:30 to 11:30 at night. Amazing dude
+            and very knowledgeable. Highly recommend!
+          </p>
+          <footer class="testimonial__foot">
+            <span class="testimonial__name">Jacob Kapers</span>
+            <span class="testimonial__meta">Google review</span>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT CTA ======================= -->
+    <section class="contact section--void" id="contact">
+      <div class="contact__ridges" aria-hidden="true">
+        <svg viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice">
+          <path d="M0 207 L10 205 L19 200 L29 194 L38 190 L48 181 L58 167 L67 149 L77 140 L87 133 L96 116 L106 116 L115 113 L125 112 L135 105 L144 107 L154 102 L167 111 L179 130 L192 142 L205 156 L217 159 L230 171 L243 173 L256 170 L268 180 L281 183 L294 193 L307 200 L319 207 L332 202 L345 210 L357 206 L373 202 L388 186 L403 177 L418 167 L433 164 L448 152 L463 149 L478 135 L493 140 L508 137 L523 130 L538 127 L553 126 L568 122 L583 117 L598 101 L609 107 L619 116 L630 121 L640 123 L651 131 L661 147 L672 163 L682 176 L693 183 L703 189 L714 188 L724 194 L735 208 L745 213 L756 212 L766 223 L781 223 L796 214 L811 206 L826 207 L841 203 L856 201 L871 191 L886 172 L901 159 L916 157 L931 142 L945 123 L960 120 L975 125 L990 119 L1005 118 L1015 130 L1024 129 L1034 131 L1044 133 L1053 149 L1063 172 L1072 176 L1082 191 L1091 192 L1101 200 L1111 201 L1120 198 L1130 197 L1139 192 L1149 204 L1158 207 L1173 201 L1188 191 L1203 196 L1218 194 L1233 178 L1248 172 L1263 156 L1278 148 L1293 141 L1308 142 L1323 132 L1338 120 L1353 111 L1368 97 L1383 91 L1398 82 L1410 90 L1423 92 L1436 93 L1448 99 L1461 103 L1474 95 L1486 93 L1499 100 L1511 121 L1524 131 L1537 144 L1549 164 L1562 172 L1575 184 L1587 193 L1600 202 L1600 300 L0 300 Z" fill="currentColor" opacity="0.35"/>
+          <path d="M0 272 L17 264 L34 252 L51 243 L68 242 L85 232 L101 222 L118 223 L135 220 L152 221 L169 213 L186 203 L203 195 L220 196 L237 197 L254 187 L271 180 L288 181 L305 191 L322 203 L339 210 L357 212 L374 215 L391 227 L408 234 L425 234 L442 239 L460 237 L477 235 L494 239 L511 246 L528 258 L545 263 L562 259 L578 262 L594 257 L610 259 L627 258 L643 254 L659 252 L675 247 L691 242 L708 244 L724 235 L740 228 L756 217 L773 209 L789 211 L805 204 L822 211 L838 211 L855 209 L871 205 L888 209 L905 215 L921 218 L938 212 L955 222 L971 231 L988 242 L1004 254 L1021 251 L1038 252 L1054 261 L1071 270 L1087 255 L1103 251 L1119 254 L1135 249 L1151 239 L1167 233 L1183 218 L1199 204 L1215 201 L1231 205 L1247 201 L1263 205 L1279 203 L1295 196 L1311 191 L1327 186 L1344 185 L1361 183 L1378 183 L1395 190 L1412 195 L1429 199 L1446 205 L1463 208 L1480 223 L1498 229 L1515 240 L1532 241 L1549 243 L1566 244 L1583 255 L1600 264 L1600 300 L0 300 Z" fill="currentColor" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="contact__inner">
+        <p class="section__eyebrow section__eyebrow--light section__eyebrow--center" data-reveal><span class="section__eyebrow-dot"></span>04 — Contact</p>
+        <h2 class="contact__title" data-split-title>Let's <em>chat.</em></h2>
+        <p class="contact__lede" data-reveal>
+          Ready to build or tune? Book a call with Jake and we'll get you on
+          the schedule. Just have a quick question? Give the shop a call.
+        </p>
+        <div class="contact__actions" data-reveal>
+          <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="btn btn--solid btn--lg" data-cursor="hover" data-magnetic>
+            <span class="btn__bg"></span>
+            <span class="btn__label">Book a Call</span>
+            <svg class="btn__icon" viewBox="0 0 16 16"><path d="M2 8 H13 M9 3.5 L13.5 8 L9 12.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </a>
+          <div class="contact__direct">
+            <a href="tel:+16125549686" class="contact__phone" data-cursor="hover">
+              or call — <em>(612) 554-9686</em>
+            </a>
+            <a href="mailto:jakebell412@gmail.com" class="contact__email" data-cursor="hover">jakebell412@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <a href="#top" class="site-footer__brand" data-cursor="hover" aria-label="Back to top">
+        <svg class="site-logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M15 41 L27 24 L33 32 L39 21 L49 41 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="site-footer__wordmark">Acclimate<small>Archery</small></span>
+      </a>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="#what-we-do" data-cursor="hover">What We Do</a>
+        <a href="#craft" data-cursor="hover">The Builder</a>
+        <a href="#territory" data-cursor="hover">Areas Served</a>
+        <a href="#merch" data-cursor="hover">Merch</a>
+        <a href="#contact" data-cursor="hover">Contact</a>
+      </nav>
+      <div class="site-footer__meta">
+        <span>Steamboat Springs, Colorado</span>
+        <span>40.4850° N / 106.8317° W · 6,732 ft</span>
+      </div>
+    </div>
+    <div class="site-footer__big" aria-hidden="true">
+      <span class="site-footer__big-text" data-footer-track>ACCLIMATE</span>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© <span id="year">2026</span> Acclimate Archery LLC. All rights reserved.</span>
+      <span class="site-footer__credit">Site design in collaboration with Claude</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <!-- Shopify Buy SDK — powers the "Add to Cart" buttons in the Merch
+       section once the store is connected; see js/shopify-store.js -->
+  <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js" defer></script>
+  <script src="js/shopify-store.js" defer></script>
+</body>
+</html>
