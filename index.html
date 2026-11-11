@@ -51,6 +51,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
 <body data-theme="dark">
+  <a class="skip-link" href="#top">Skip to content</a>
 
   <!-- ======================= PRELOADER ======================= -->
   <div class="preloader" id="preloader" aria-hidden="true">
@@ -103,14 +104,14 @@
         <a href="#territory" class="site-nav__link" data-cursor="hover"><span class="site-nav__num">03</span>Areas Served</a>
       </nav>
 
-      <a href="#top" class="site-logo" data-cursor="hover" aria-label="Acclimate Archery — home">
+      <a href="#top" class="site-logo" data-cursor="hover">
         <svg class="site-logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
           <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.5"/>
           <path d="M15 41 L27 24 L33 32 L39 21 L49 41 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
         </svg>
         <span class="site-logo__type">
           <span class="site-logo__name">Acclimate</span>
-          <span class="site-logo__sub">A&nbsp;R&nbsp;C&nbsp;H&nbsp;E&nbsp;R&nbsp;Y</span>
+          <span class="site-logo__sub" aria-hidden="true">A&nbsp;R&nbsp;C&nbsp;H&nbsp;E&nbsp;R&nbsp;Y</span><span class="visually-hidden">Archery</span>
         </span>
       </a>
 
@@ -120,7 +121,7 @@
           <span class="btn__bg"></span>
           <span class="btn__label">Contact</span>
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" data-cursor="hover">
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" data-cursor="hover">
           <span></span><span></span>
         </button>
       </div>
@@ -142,7 +143,7 @@
     </div>
   </div>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
 
     <!-- ======================= HERO ======================= -->
     <section class="hero hero--photo" id="hero">
@@ -259,7 +260,7 @@
             <li>Draw-length &amp; grip fitting</li>
             <li>Paper-tuned &amp; sighted at the shop</li>
           </ul>
-          <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i>→</i></a>
+          <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i aria-hidden="true">→</i><span class="visually-hidden"> (opens in a new tab)</span></a>
         </article>
 
         <article class="service-card" data-tilt data-reveal>
@@ -287,7 +288,7 @@
             <li>String, cable &amp; peep service</li>
             <li>Broadhead flight verification</li>
           </ul>
-          <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i>→</i></a>
+          <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i aria-hidden="true">→</i><span class="visually-hidden"> (opens in a new tab)</span></a>
         </article>
 
         <article class="service-card" data-tilt data-reveal>
@@ -310,7 +311,7 @@
             <li>Acclimate Archery tees</li>
             <li>Small drops, no reprints</li>
           </ul>
-          <a href="#contact" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i>→</i></a>
+          <a href="#contact" class="service-card__cta service-card__cta--btn" data-cursor="hover">Get in Touch<i aria-hidden="true">→</i></a>
         </article>
       </div>
 
@@ -404,7 +405,7 @@
         </h2>
         <div class="territory__grid">
           <div class="territory__map" data-reveal>
-            <svg viewBox="0 0 460 340" fill="none" aria-label="Map of Colorado with Steamboat Springs marked">
+            <svg viewBox="0 0 460 340" fill="none" role="img" aria-label="Map of Colorado with Steamboat Springs marked">
               <defs>
                 <clipPath id="coClip"><rect x="30" y="40" width="400" height="260" rx="3"/></clipPath>
               </defs>
@@ -519,22 +520,22 @@
         <a class="brand-row" href="https://optionarchery.com" target="_blank" rel="noopener" data-cursor="hover">
           <span class="brand-row__name">Option Archery</span>
           <span class="brand-row__desc">Switchback sights &amp; quivers</span>
-          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
         </a>
         <a class="brand-row" href="https://gasbowstrings.com" target="_blank" rel="noopener" data-cursor="hover">
           <span class="brand-row__name">GAS Bowstrings</span>
           <span class="brand-row__desc">Custom strings &amp; cables</span>
-          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
         </a>
         <a class="brand-row" href="https://www.arizonaarchery.com" target="_blank" rel="noopener" data-cursor="hover">
           <span class="brand-row__name">AAE — Arizona Archery</span>
           <span class="brand-row__desc">Rests, vanes &amp; accessories</span>
-          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
         </a>
         <a class="brand-row" href="https://psearchery.com" target="_blank" rel="noopener" data-cursor="hover">
           <span class="brand-row__name">PSE Archery</span>
           <span class="brand-row__desc">Bows &amp; risers</span>
-          <span class="brand-row__arrow" aria-hidden="true">↗</span>
+          <span class="brand-row__arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
         </a>
       </div>
     </section>
@@ -620,7 +621,7 @@
         <div class="contact__actions" data-reveal>
           <a href="https://cal.com/jake-bell-qwoqzg/15min" target="_blank" rel="noopener" class="btn btn--solid btn--lg" data-cursor="hover" data-magnetic>
             <span class="btn__bg"></span>
-            <span class="btn__label">Book a Call</span>
+            <span class="btn__label">Book a Call</span><span class="visually-hidden"> (opens in a new tab)</span>
             <svg class="btn__icon" viewBox="0 0 16 16"><path d="M2 8 H13 M9 3.5 L13.5 8 L9 12.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
           </a>
           <div class="contact__direct">
@@ -638,7 +639,7 @@
   <!-- ======================= FOOTER ======================= -->
   <footer class="site-footer">
     <div class="site-footer__top">
-      <a href="#top" class="site-footer__brand" data-cursor="hover" aria-label="Back to top">
+      <a href="#top" class="site-footer__brand" data-cursor="hover">
         <svg class="site-logo__mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
           <circle cx="32" cy="32" r="29" stroke="currentColor" stroke-width="2.5"/>
           <path d="M15 41 L27 24 L33 32 L39 21 L49 41 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" fill="none"/>

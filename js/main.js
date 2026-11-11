@@ -277,6 +277,11 @@
     const target = parseFloat(el.dataset.count);
     const suffix = el.dataset.suffix || "";
     const format = el.dataset.format;
+    if (prefersReduced) {
+      // no count-up animation for reduced-motion users: show the final value
+      el.textContent = (format === "comma" ? target.toLocaleString("en-US") : String(target)) + suffix;
+      return;
+    }
     const DUR = 1800;
     const t0 = performance.now();
     (function step(now) {
@@ -748,15 +753,36 @@
   const navToggle = document.getElementById("navToggle");
   const mobileMenu = document.getElementById("mobileMenu");
   if (navToggle && mobileMenu) {
-    const setOpen = (open) => {
+    const menuLinks = [...mobileMenu.querySelectorAll("a")];
+    const isOpen = () => navToggle.classList.contains("is-open");
+    const setOpen = (open, { returnFocus = false } = {}) => {
       navToggle.classList.toggle("is-open", open);
       mobileMenu.classList.toggle("is-open", open);
       navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       mobileMenu.setAttribute("aria-hidden", String(!open));
       document.body.style.overflow = open ? "hidden" : "";
+      // move keyboard focus into the menu when it opens (after the
+      // visibility flip so the link is focusable), back to the toggle on Esc
+      if (open && menuLinks[0]) requestAnimationFrame(() => menuLinks[0].focus());
+      if (!open && returnFocus) navToggle.focus();
     };
-    navToggle.addEventListener("click", () => setOpen(!navToggle.classList.contains("is-open")));
-    mobileMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    navToggle.addEventListener("click", () => setOpen(!isOpen()));
+    menuLinks.forEach((a) => a.addEventListener("click", () => setOpen(false)));
+    // while open: Esc closes, Tab cycles between the toggle and the menu links
+    document.addEventListener("keydown", (e) => {
+      if (!isOpen()) return;
+      if (e.key === "Escape") { e.preventDefault(); setOpen(false, { returnFocus: true }); return; }
+      if (e.key !== "Tab") return;
+      const order = [navToggle, ...menuLinks];
+      const i = order.indexOf(document.activeElement);
+      const next = e.shiftKey ? (i <= 0 ? order.length - 1 : i - 1) : (i === -1 || i === order.length - 1 ? 0 : i + 1);
+      e.preventDefault();
+      order[next].focus();
+    });
+    // if the viewport grows past the mobile breakpoint, don't leave the
+    // page scroll-locked behind a menu that's no longer reachable
+    matchMedia("(min-width: 901px)").addEventListener("change", (mq) => { if (mq.matches && isOpen()) setOpen(false); });
   }
 
   /* ============================================================
@@ -782,8 +808,10 @@
      SPECIALTIES SCAN — step a highlight through the list; pause
      while the user is hovering to explore on their own
      ============================================================ */
+  // (auto-advancing highlight is motion — skipped for reduced-motion users;
+  // hovering still highlights each item via CSS)
   const specList = document.getElementById("specialtiesList");
-  if (specList) {
+  if (specList && !prefersReduced) {
     const items = [...specList.children];
     let hot = 0;
     let paused = false;
