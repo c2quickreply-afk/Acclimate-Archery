@@ -1288,3 +1288,53 @@ body.has-cursor .cursor { display: block; }
     background: rgba(12, 11, 10, 0.9);
   }
 }
+
+/* ============================================================
+   LEGAL PAGES (privacy.html) — plain reading layout in the site palette
+   ============================================================ */
+.legal-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem var(--gutter);
+  background: var(--void); color: var(--bone);
+}
+.legal-header__back {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ash);
+}
+.legal-header__back:hover { color: var(--bone); }
+.legal {
+  max-width: 68ch; margin: 0 auto;
+  padding: clamp(3rem, 8vh, 5rem) var(--gutter) clamp(4rem, 10vh, 6rem);
+}
+.legal h1 {
+  font-weight: 600; font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1; letter-spacing: -0.01em;
+}
+.legal h2 {
+  font-weight: 600; font-size: clamp(1.15rem, 2vw, 1.4rem);
+  margin: 2.6rem 0 0.8rem;
+}
+.legal p, .legal li { font-size: 1rem; color: var(--coal); }
+.legal p + p { margin-top: 1rem; }
+.legal ul { margin: 0.6rem 0 1rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.legal li { padding-left: 1.4rem; position: relative; }
+.legal li::before {
+  content: ""; position: absolute; left: 0; top: 0.8em;
+  width: 10px; height: 1px; background: var(--ember);
+}
+.legal a { text-decoration: underline; text-underline-offset: 3px; }
+.legal a:hover { color: var(--ember); }
+.legal__updated {
+  margin: 0.8rem 0 2rem;
+  font-size: 0.72rem !important; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ash-2) !important;
+}
+.legal__draft {
+  margin-bottom: 2rem; padding: 0.9rem 1.1rem;
+  border: 1px solid var(--ember); border-left-width: 4px;
+  background: var(--paper-2);
+}
+.legal-footer { padding-top: 0; }
+.legal-footer a { text-decoration: underline; text-underline-offset: 3px; }
+.site-footer__privacy { color: var(--ash); text-decoration: underline; text-underline-offset: 3px; }
+.site-footer__privacy:hover { color: var(--bone); }
