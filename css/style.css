@@ -341,15 +341,6 @@ body.has-cursor .cursor { display: block; }
 .btn--ghost .btn__bg { background: var(--bone); }
 .btn--ghost:hover { color: var(--coal); }
 
-/* visibly inactive — for buttons that don't do anything yet (e.g. merch
-   checkout before the store's connected). No fill sweep, no lift on hover,
-   just a flat muted state that reads as "not clickable" */
-.btn--disabled {
-  color: var(--ash-2); border-color: var(--line);
-  background: transparent; cursor: not-allowed;
-}
-.btn--disabled:hover { color: var(--ash-2); border-color: var(--line); }
-
 .btn--sm { padding: 0.75em 1.4em; font-size: 0.65rem; }
 .btn--lg { padding: 1.25em 2.4em; font-size: 0.8rem; }
 
@@ -980,7 +971,7 @@ body.has-cursor .cursor { display: block; }
 /* ============================================================
    BRANDS
    ============================================================ */
-.brands { background: var(--paper); padding-bottom: clamp(2.5rem, 5vh, 4rem); }
+.brands { background: var(--paper); }
 .brands__rows { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--line); }
 .brand-row {
   position: relative; overflow: hidden;
@@ -1018,113 +1009,6 @@ body.has-cursor .cursor { display: block; }
   .brand-row { grid-template-columns: 1fr auto; }
   .brand-row__desc { display: none; }
 }
-
-/* ============================================================
-   MERCH
-   ============================================================ */
-.merch { background: var(--paper); padding-top: clamp(2rem, 4vh, 3.5rem); }
-.merch .section__head--tight { margin-bottom: clamp(1.7rem, 4vh, 3rem); }
-.merch .section__title--sm { font-size: clamp(1.6rem, 3.4vw, 2.7rem); }
-.merch__grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: clamp(1.05rem, 2.5vw, 2rem);
-  max-width: 920px; margin: 0 auto;
-  perspective: 1400px;
-}
-@media (max-width: 700px) { .merch__grid { grid-template-columns: 1fr; max-width: 400px; } }
-
-.merch-card {
-  position: relative; overflow: hidden;
-  background: var(--paper-2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  display: flex; flex-direction: column;
-  transition: border-color 0.5s, box-shadow 0.5s, transform 0.5s var(--ease-out);
-}
-.merch-card:hover {
-  border-color: var(--coal);
-  box-shadow: 0 30px 60px -24px rgba(20, 18, 16, 0.35);
-}
-.merch-card__photo {
-  position: relative; aspect-ratio: 1 / 1; overflow: hidden;
-}
-.merch-card__photo-ph { position: absolute; inset: 0; }
-.merch-card__photo-ph svg { width: 100%; height: 100%; display: block; }
-.merch-card__photo img, .merch-card__photo-ph {
-  transform: scale(1.1) translateY(var(--py, 0px));
-  will-change: transform;
-  transition: transform 0.7s var(--ease-out);
-}
-.merch-card:hover .merch-card__photo img,
-.merch-card:hover .merch-card__photo-ph { transform: scale(1.16) translateY(var(--py, 0px)); }
-.merch-card__badge {
-  position: absolute; top: 13px; left: 13px;
-  font-family: var(--f-tech); font-weight: 600;
-  font-size: 0.53rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--bone); background: var(--ember);
-  padding: 0.38em 0.68em; border-radius: var(--radius);
-}
-.merch-card__body {
-  padding: clamp(1.25rem, 2vw, 1.75rem);
-  display: flex; flex-direction: column; gap: 0.9rem;
-  flex: 1;
-}
-.merch-card__head {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 0.85rem;
-}
-.merch-card__name {
-  font-family: var(--f-display); font-weight: 800; font-stretch: 108%;
-  font-size: clamp(0.95rem, 1.35vw, 1.15rem);
-  text-transform: uppercase; line-height: 1.15;
-}
-.merch-card__price {
-  font-family: var(--f-tech); font-weight: 600; font-size: 0.98rem;
-  color: var(--ember); flex-shrink: 0;
-}
-.merch-card__desc { font-size: 0.78rem; line-height: 1.5; color: var(--ash-2); }
-.merch-card__sizes { display: flex; flex-wrap: wrap; gap: 0.42rem; }
-.merch-card__size {
-  font-family: var(--f-tech); font-size: 0.6rem; font-weight: 600;
-  letter-spacing: 0.05em;
-  padding: 0.46em 0.75em;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: transparent; color: var(--ash-2);
-  cursor: pointer;
-  transition: color 0.3s, border-color 0.3s, background 0.3s;
-}
-.merch-card__size:hover { border-color: var(--coal); color: var(--coal); }
-.merch-card__size.is-active {
-  background: var(--coal); border-color: var(--coal); color: var(--bone);
-}
-.merch-card__actions {
-  margin-top: auto; padding-top: 0.5rem;
-  display: flex; flex-direction: column; gap: 0.5rem;
-}
-.merch-card__buy {
-  width: 100%; justify-content: center;
-  padding: 0.85em 1.5em; font-size: 0.62rem;
-}
-.merch-card__note {
-  display: block;
-  font-size: 0.58rem; letter-spacing: 0.09em; text-align: center;
-  color: var(--ash-2); transition: color 0.3s;
-}
-.merch-card__note.is-flash { color: var(--ember); }
-/* once Shopify is connected: "N items in cart — Checkout" becomes a
-   live link, errors (sold out, add-to-cart failure) get a color cue */
-.merch-card__note--link {
-  color: var(--ember); font-weight: 600; cursor: pointer;
-  text-decoration: underline; text-underline-offset: 2px;
-}
-.merch-card__note--link:hover { color: var(--coal); }
-.merch-card__note--error { color: var(--ember); }
-
-.merch__note {
-  text-align: center; margin-top: clamp(2.5rem, 6vh, 4rem);
-  font-size: clamp(1rem, 1.6vw, 1.25rem); color: var(--ash-2);
-}
-.merch__note em { font-family: var(--f-tech); font-style: normal; font-weight: 600; font-size: 1em; color: var(--coal); }
 
 /* ============================================================
    QUOTE

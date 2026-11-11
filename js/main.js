@@ -71,10 +71,10 @@
     // element, i.e. exactly when the dark fill is showing. Solid ember
     // buttons (.btn--solid) are deliberately NOT in this list — the ring is
     // much bigger than those buttons and mostly overlaps whatever's around
-    // them, which is often still a light section (e.g. the merch buy
-    // buttons), so the ring should keep reading off the section, not the
+    // them, which is often still a light section, so the ring should keep
+    // reading off the section, not the
     // button; only the dot (see FILL_SELECTOR below) needs to react to it.
-    const LOCAL_DARK_SELECTOR = ".service-card, .brand-row, .service-card__cta--btn, .merch-card__size.is-active, .merch-card__photo";
+    const LOCAL_DARK_SELECTOR = ".service-card, .brand-row, .service-card__cta--btn";
     // a couple of specific spots where the section-based light/dark read
     // gets it wrong against the photo behind them — force the ring dark
     // regardless of what section they're in
@@ -791,28 +791,6 @@
       hot++;
     }, 2200);
   }
-
-  /* ============================================================
-     MERCH — size pills + buy button (Shopify Buy Button hooks
-     into .merch-card__buy once the store is connected)
-     ============================================================ */
-  document.querySelectorAll(".merch-card__sizes").forEach((group) => {
-    const pills = [...group.querySelectorAll(".merch-card__size")];
-    pills.forEach((pill) => {
-      pill.addEventListener("click", () => {
-        pills.forEach((p) => p.classList.remove("is-active"));
-        pill.classList.add("is-active");
-      });
-    });
-  });
-  document.querySelectorAll(".merch-card__buy").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const note = btn.closest(".merch-card__actions").querySelector(".merch-card__note");
-      if (!note) return;
-      note.classList.add("is-flash");
-      setTimeout(() => note.classList.remove("is-flash"), 1400);
-    });
-  });
 
   /* ============================================================
      MISC
