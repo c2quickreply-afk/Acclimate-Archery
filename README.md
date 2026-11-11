@@ -59,11 +59,13 @@ Marked slots, all commented in `index.html`:
 
 ## Things to confirm with Jake
 
-- **Testimonials** — the HTML labels all three as real Google reviews. Confirm
-  each one matches the Google review word for word, with the reviewer's name.
-- **Brands section** — eyebrow says "Partners". Only keep that if Jake has a
-  formal relationship with each brand; otherwise use neutral wording.
-- **"Acclimate Archery LLC"** in the footer — confirm the LLC is registered.
+- **Testimonials** — the HTML labels all three as real Google reviews. Keep each
+  one word for word as it appears on Google, with the reviewer's name.
+- **Business name** — the site says "Acclimate Archery" with no entity suffix.
+  If the LLC is confirmed registered with the Colorado Secretary of State, it's
+  fine to add "LLC" to the footer and privacy page.
+- **Brands** — listed as "Brands we use" with plain text names, no logos. Don't
+  call them partners or sponsors unless there's a formal agreement.
 
 ## Store (removed for now)
 
@@ -124,8 +126,7 @@ Everything comes from the site's own origin. That means:
 `privacy.html` is built from what the site actually does (no forms, cookies,
 analytics or browser storage; Vercel hosting logs; Cal.com booking; Gmail).
 If you add anything that collects data, update it and its "Last updated" date.
-It's currently marked **DRAFT** (banner + `noindex`) until Jake approves it.
-Remove both once he does.
+Approved November 2026.
 
 ## Design system quick reference
 

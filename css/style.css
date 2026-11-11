@@ -1329,11 +1329,6 @@ body.has-cursor .cursor { display: block; }
   font-size: 0.72rem !important; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--ash-2) !important;
 }
-.legal__draft {
-  margin-bottom: 2rem; padding: 0.9rem 1.1rem;
-  border: 1px solid var(--ember); border-left-width: 4px;
-  background: var(--paper-2);
-}
 .legal-footer { padding-top: 0; }
 .legal-footer a { text-decoration: underline; text-underline-offset: 3px; }
 .site-footer__privacy { color: var(--ash); text-decoration: underline; text-underline-offset: 3px; }

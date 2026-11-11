@@ -478,17 +478,6 @@
     })(performance.now());
   }
 
-  // ---- wind ticker (small live detail, kept even in photo mode) ----
-  const windVal = document.getElementById("windVal");
-  if (windVal) {
-    const dirs = ["NW", "WNW", "W", "NNW"];
-    setInterval(() => {
-      const speed = (2 + Math.random() * 4).toFixed(1);
-      const dir = dirs[Math.floor(Math.random() * dirs.length)];
-      windVal.textContent = `${speed} MPH ${dir}`;
-    }, 4000);
-  }
-
   /* ============================================================
      TILT CARDS — 3D perspective + sheen tracking
      ============================================================ */
