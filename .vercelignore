@@ -1,0 +1,8 @@
+# Never deploy notes, docs, tooling or secrets — only the site itself.
+*.md
+.claude
+.github
+.git
+.vercel
+.env*
+node_modules

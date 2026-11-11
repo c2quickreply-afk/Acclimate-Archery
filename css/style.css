@@ -482,7 +482,7 @@ body.has-cursor .cursor { display: block; }
 .hero__mist, .hero__snow { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero__grain {
   position: absolute; inset: -50%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-image: url("../Images/grain.svg");
   opacity: 0.035; pointer-events: none;
 }
 .hero__vignette {
@@ -886,6 +886,7 @@ body.has-cursor .cursor { display: block; }
 .territory__border {
   stroke: rgba(236,233,226,0.5); stroke-width: 1.2; fill: rgba(236,233,226,0.02);
 }
+.territory__marker { --mx: 157px; --my: 74px; }
 .territory__dot { fill: var(--ember); }
 .territory__pulse {
   fill: none; stroke: var(--ember); stroke-width: 1;

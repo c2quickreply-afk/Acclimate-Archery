@@ -301,15 +301,23 @@
     // ---- stars ----
     const starField = document.getElementById("heroStars");
     if (starField) {
+      // built with the DOM style API rather than innerHTML style="" strings,
+      // so it works under a Content-Security-Policy without 'unsafe-inline'
       const n = 70;
-      let html = "";
+      const frag = document.createDocumentFragment();
       for (let i = 0; i < n; i++) {
         const x = Math.random() * 100, y = Math.random() * 100;
         const tw = (2.5 + Math.random() * 5).toFixed(1);
         const s = Math.random() < 0.15 ? 2.5 : 1.4;
-        html += `<i style="left:${x}%;top:${y}%;width:${s}px;height:${s}px;--tw:${tw}s;animation-delay:${(Math.random() * 5).toFixed(1)}s"></i>`;
+        const star = document.createElement("i");
+        star.style.left = `${x}%`;
+        star.style.top = `${y}%`;
+        star.style.width = star.style.height = `${s}px`;
+        star.style.setProperty("--tw", `${tw}s`);
+        star.style.animationDelay = `${(Math.random() * 5).toFixed(1)}s`;
+        frag.appendChild(star);
       }
-      starField.innerHTML = html;
+      starField.appendChild(frag);
     }
 
     // ---- pointer + scroll parallax on ridges ----
